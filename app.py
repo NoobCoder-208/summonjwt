@@ -121,6 +121,7 @@ async def create_jwt(uid: str, password: str):
                 logger.warning(f"No token received in response: {msg}")
             return {
                 'token': f"{token}",
+                'access_token': token_val,
                 'region': msg.get('lockRegion', '0'),
                 'server_url': msg.get('serverUrl', '0')
             }
