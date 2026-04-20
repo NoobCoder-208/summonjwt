@@ -200,6 +200,7 @@ async def create_jwt(uid: str, password: str):
             return {
                 'token': f"{token}",
                 'access_token': token_val,
+                'uid': account_id,
                 'level': level,
                 'name': nickname,
                 'region': msg.get('lockRegion', '0'),
